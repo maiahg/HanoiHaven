@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root{
+    --beige: #f3f1ea;
+    --dark: #1b274d;
+    --yellow: #fab254;
+}
+
+*{
+    background-color: #f3f1ea;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+/* header */
+header{
+    position: fixed;
+    top: 1.2rem;
+    left: 0;
+    right: 0;
+    background-color: var(--beige);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-bottom: .2rem solid var(--dark);
+}
+
+header .navbar a{
+    font-weight: 600;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    padding: .5rem 1.5rem;
+    color: var(--dark);
+}
+
+header .navbar a.active {
+    border: 2px solid var(--dark);
+    border-radius: 0.5rem;
+}
+
+header .navbar a:hover{
+    background: var(--yellow);
+    color: var(--dark);
+}
+
+header .icons a{
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+header .container{
+    margin-left: 3rem;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+header .menu-bar{
+    display: none;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    position: relative;
+    transition: all 0.4s;
+}
+
+header .menu-bar::after{
+    bottom:9px;
+}
+
+header .menu-bar::before{
+    bottom:18px;
+}
+
+header .menu-bar::before, header .icons .menu-bar::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    transition: all 0.4s;
+}
+
+
+/* media querries */
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    header .icons .menu-bar{
+        display:block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--beige);
+        border-top: .3rem solid var(--dark);
+        border-bottom: .3rem solid var(--dark);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    header .navbar a.active {
+        border: none;
+    }
+
+    header .container.active {
+        margin-bottom: 0rem;
+    }
+    header .container.active .menu-bar::after{
+        transform: rotateZ(45deg) translate(-3.1px, -3.1px);
+    }
+    
+    header .container.active .menu-bar::before{
+        transform: rotateZ(-45deg) translate(-3.1px, 3.1px);
+    }
+    
+    header .container.active .menu-bar{
+        background-color: transparent;
+    }
+}
