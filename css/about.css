@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root{
+    --beige: #f3f1ea;
+    --dark: #1b274d;
+    --yellow: #fab254;
+}
+
+*{
+    background-color: #f3f1ea;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--beige);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-bottom: .2rem solid var(--dark);
+}
+
+header .navbar a{
+    font-weight: 600;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    padding: .5rem 1.5rem;
+    color: var(--dark);
+}
+
+header .navbar a.active {
+    border: 2px solid var(--dark);
+    border-radius: 0.5rem;
+}
+
+header .navbar a:hover{
+    background: var(--yellow);
+    color: var(--dark);
+}
+
+header .icons a{
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+header .container{
+    margin-left: 3rem;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+header .menu-bar{
+    display: none;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    position: relative;
+    transition: all 0.4s;
+}
+
+header .menu-bar::after{
+    bottom:9px;
+}
+
+header .menu-bar::before{
+    bottom:18px;
+}
+
+header .menu-bar::before, header .icons .menu-bar::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    transition: all 0.4s;
+}
+.title{
+    padding: 5.9rem 0%;
+    position: relative;
+    text-align: center;
+}
+.swiper-slide{
+    display: flex;
+    align-items: center;
+
+}
+
+.title img{
+    opacity: 0.8;
+    width: 100%;
+}
+.title .content {
+    background-color: transparent;
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title .content h1{
+    letter-spacing: 0.4rem;
+    background-color: transparent;
+    text-shadow: 0 0 8px var(--dark);
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--beige);
+    text-transform: uppercase;
+}
+
+.scroll-down {
+    background-color: transparent;
+    position: absolute;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #f3f1ea;
+    border-right: 5px solid #f3f1ea;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+    -webkit-animation: fade_move_down 4s ease-in-out infinite;
+    -moz-animation:    fade_move_down 4s ease-in-out infinite;
+    animation:         fade_move_down 4s ease-in-out infinite;
+  }
+
+.ourStory{
+    padding: 1rem 7%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ourStory .content{
+    flex: 1 1 50%;
+}
+
+.ourStory .image{
+    flex: 1 1 50%;
+}
+
+.ourStory .image img{
+    width: 80%;
+}
+
+.ourStory h2{
+        font-size: 3rem;
+        font-weight: 500;
+        text-decoration: underline;
+        color: var(--dark);
+        text-align: center;
+}
+
+.ourStory p{
+        font-size: 1.6rem;
+        color: var(--dark);
+        padding: 2rem 2rem 0 2rem;
+        line-height: 1.5;
+}
+  
+  
+  /*animated scroll arrow animation*/
+  @-webkit-keyframes fade_move_down {
+    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @-moz-keyframes fade_move_down {
+    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @keyframes fade_move_down {
+    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+
+/* media querries */
+@media (max-width:1200px) {
+    html{
+        font-size: 75%;
+    }
+    .home {
+        padding-top: 10rem;
+        padding-bottom: 20rem;
+    }
+
+    .title .content{
+        top: 50%;
+    }
+    .scroll-down{
+        top: 80%;
+    }
+}
+
+@media (max-width:991px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    html{
+        font-size: 60%;
+    }
+
+    .home {
+        padding-top: 20rem;
+        padding-bottom: 15rem;
+    }
+
+    .title .content{
+        top: 50%;
+    }
+    .scroll-down{
+        top: 80%;
+    }
+}
+
+@media (max-width:768px) {
+    header .icons .menu-bar{
+        display:block;
+    }
+
+    html{
+        font-size: 45%;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--beige);
+        border-top: .3rem solid var(--dark);
+        border-bottom: .3rem solid var(--dark);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    header .navbar a.active {
+        border: none;
+    }
+
+    header .container.active {
+        margin-bottom: 0rem;
+    }
+    header .container.active .menu-bar::after{
+        transform: rotateZ(45deg) translate(-3.1px, -3.1px);
+    }
+    
+    header .container.active .menu-bar::before{
+        transform: rotateZ(-45deg) translate(-3.1px, 3.1px);
+    }
+    
+    header .container.active .menu-bar{
+        background-color: transparent;
+    }
+
+    .title .content{
+        top: 50%;
+    }
+    .title .content h1{
+        font-size: 3rem;
+    }
+
+    .scroll-down{
+        top: 70%;
+        width: 20px;
+        height: 20px;
+        border-bottom: 2.5px solid #f3f1ea;
+        border-right: 2.5px solid #f3f1ea;
+    }
+
+    .ourStory {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ourStory .image{
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+}
