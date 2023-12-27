@@ -223,7 +223,10 @@ header .menu-bar::before, header .icons .menu-bar::after{
     line-height: 1.5;
     padding: 1rem 0;
 }
-
+.intro .btn-container{
+    display: flex;
+    gap: 1rem;
+}
 .intro .btn {
     margin-top: 2.3rem;
     display: inline-block;
@@ -239,7 +242,6 @@ header .menu-bar::before, header .icons .menu-bar::after{
 .intro .btn:hover{
     background: var(--yellow);
     color: var(--dark);
-    letter-spacing: 0.1rem;
 }
 
 /* media querries */
