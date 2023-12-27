@@ -155,7 +155,7 @@ header .menu-bar::before, header .icons .menu-bar::after{
 .locations .content p{
     font-size: 1.5rem;
     color: var(--dark);
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
 }
 
 .btn {
