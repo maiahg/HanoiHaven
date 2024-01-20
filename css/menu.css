@@ -248,6 +248,7 @@ header .menu-bar::before, header .icons .menu-bar::after{
 .footer{
     background-color: var(--dark);
     padding-top: 0;
+    padding-bottom: 2rem;
 }
 .footer .box-container{
     background-color: var(--dark);

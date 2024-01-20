@@ -101,6 +101,7 @@ header .menu-bar::before, header .icons .menu-bar::after{
 
 .locations{
     height: 100vh;
+    margin-bottom: 3rem;
 }
 
 .locations h1{
@@ -174,7 +175,6 @@ header .menu-bar::before, header .icons .menu-bar::after{
     cursor: pointer;
     padding: 1rem 2rem;
 }
-
 
 .reservation{
     position: fixed;
@@ -281,6 +281,7 @@ header .menu-bar::before, header .icons .menu-bar::after{
 .footer{
     background-color: var(--dark);
     padding-top: 0;
+    padding-bottom: 2rem;
 }
 .footer .box-container{
     background-color: var(--dark);
