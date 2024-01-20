@@ -10,19 +10,18 @@
 </head>
 <body>
     <!-- header section starts -->
-    <header>
+    <header id="header">
         <div class="logo">
             <img src="/images/logos/logo2.png" alt="Hanoi Haven logo" width="120px">
         </div>
         <nav class="navbar">
-            <a href="/html/homepage.html" class="active">Home</a>
+            <a href="/html/homepage.html">Home</a>
             <a href="/html/about.html">About Us</a>
             <a href="/html/locations.html">Locations</a>
-            <a href="menu.html">Menu</a>
-            <a href="#reservation">Reservation</a>
+            <a href="/html/menu.html">Menu</a>
+            <a class="active" id="open-reservation">Reservation</a>
         </nav>
         <div class="icons">
-            <a href="#"><img src="/images/cart.png" alt="cart icon" width="30px"></a>
             <div class="container">
                 <div class="menu-bar"></div>
             </div>
@@ -31,7 +30,8 @@
 
     <!-- header section ends -->
 
-    <section class="title">
+    <!-- about section starts-->
+    <section class="title" id="title">
         <div class="content">
             <h1>About Us</h1>
         </div>
@@ -51,7 +51,7 @@
         <div class="scroll-down"></div>
     </section>
 
-    <section class="ourStory">
+    <section class="ourStory" id="ourStory">
         <div class="image">
             <img src="/images/restaurant photos/cooking.jpg" alt="Our Story image">
         </div>
@@ -64,7 +64,7 @@
         </div>
     </section>
 
-    <section class="ourMenu">
+    <section class="ourMenu" id="ourMenu">
         <div class="content">
             <h2>Our Menu</h2>
             <p>Embark on a culinary odyssey at Hanoi Haven as you explore our thoughtfully curated menu, a gastronomic journey that captures the essence of Hanoi's culinary heritage. Begin your adventure with our appetizers, where the freshness of our summer rolls and the delectable crunch of our spring rolls set the stage for the culinary delights to come. Dive into the rich world of banh mi, our signature sandwiches that encapsulate the perfect fusion of flavors, textures, and aromas—a true representation of the vibrant street food culture of Vietnam.</p>
@@ -77,6 +77,53 @@
             <img src="/images/restaurant photos/IMG_9031.JPG" alt="Our Menu image">
         </div>
     </section>
+
+    <!-- about section ends-->
+
+    <!-- reservation section starts  -->
+    <section class="reservation" id="reservation">
+        <div class="section-center" >
+            <div class="close-btn">
+                <img src="/images/close.png" alt="close button" id="close-btn">
+            </div>
+            <div class="reservation-form">
+                <div class="form-header">
+                    <h1>Reservation</h1>
+                </div>
+                <form action="" class="form">
+                    <div class="inputBox">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name"  placeholder="Your name" name="name" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="tel" id="phone_number" placeholder="123-456-7890" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="datetime">Date And Time</label>
+                        <input type="datetime-local" id="datetime" name="datetime" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="number_of_people">Number of People</label>
+                        <select name="number_of_people" id="number_of_people">
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7">7 People</option>
+                            <option value="8">8+ People</option>
+                        </select>
+                    </div>
+                    <div class="reserve-btn">
+                        <input type="submit" value="RESERVE A TABLE" class="btn" id="submit-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- reservation section ends -->
     
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

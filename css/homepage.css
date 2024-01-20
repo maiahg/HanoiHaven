@@ -36,11 +36,11 @@ header{
     left: 0;
     right: 0;
     background-color: var(--beige);
-    padding: 1rem 7%;
+    padding: 1.5rem 7% 1.5rem 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
+    z-index: 10;
     border-bottom: .2rem solid var(--dark);
 }
 
@@ -48,13 +48,14 @@ header .navbar a{
     font-weight: 600;
     font-size: 1.7rem;
     border-radius: 0.5rem;
-    padding: .5rem 1.5rem;
+    padding: .5rem 4rem;
     color: var(--dark);
 }
 
 header .navbar a.active {
     border: 2px solid var(--dark);
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 header .navbar a:hover{
@@ -239,10 +240,112 @@ header .menu-bar::before, header .icons .menu-bar::after{
     padding: 1rem 2rem;
 }
 
-.intro .btn:hover{
+.intro .btn:hover, .reservation-form .reserve-btn input:hover{
     background: var(--yellow);
     color: var(--dark);
 }
+
+.reservation{
+    position: fixed;
+    width: 70%;
+    top: 10%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 0;
+    display: none;
+}
+
+.section-center{
+    position: absolute;
+    border: 7px solid var(--dark);
+}
+
+.reservation-form{
+    position: relative;
+    margin: auto;
+    padding: 3rem;
+    padding-top: 1rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.reservation-form::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.reservation-form .form-header{
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.reservation-form .form-header h1{
+    text-align: center;
+    color: var(--dark);
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.close-btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 3rem 3rem 1rem 0;
+    cursor: pointer;
+}
+.close-btn img{
+    width: 2.5rem;
+}
+
+.reservation-form form{
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.reservation-form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5rem 1.5rem 0;
+}
+
+.reservation-form .inputBox label{
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.reservation-form .inputBox input, select{
+    border: 1px solid var(--dark);
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+
+.reservation-form .reserve-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.reservation-form .reserve-btn input{
+    font-size: 2rem;
+    font-weight: 600;
+    border: 2px solid var(--dark);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
 
 /* media querries */
 @media (max-width:1200px) {
@@ -253,6 +356,16 @@ header .menu-bar::before, header .icons .menu-bar::after{
         padding-top: 10rem;
         padding-bottom: 20rem;
     }
+
+    header .navbar a{
+        padding: .5rem 1.3rem;
+
+    }
+
+    .reservation{
+        top: 3%;
+        left: 55%;
+    }
 }
 
 @media (max-width:991px) {
@@ -261,12 +374,27 @@ header .menu-bar::before, header .icons .menu-bar::after{
     }
 
     html{
-        font-size: 60%;
+        font-size: 45%;
     }
 
     .home {
         padding-top: 20rem;
         padding-bottom: 15rem;
+    }
+
+    .intro .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro .row .image{
+        padding-left: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .reservation{
+        top: 20%;
+        left: 60%;
     }
 }
 
@@ -349,14 +477,8 @@ header .menu-bar::before, header .icons .menu-bar::after{
         padding-bottom: 35rem;
     }
 
-    .intro .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .intro .row .image{
-        padding-left: 5rem;
-        padding-bottom: 2rem;
+    .reservation{
+        left: 45%;
     }
 }
 
