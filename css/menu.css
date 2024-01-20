@@ -217,6 +217,7 @@ header .menu-bar::before, header .icons .menu-bar::after{
 
 .reservation-form .inputBox label{
     display: block;
+    color: var(--dark);
     padding: 0.5rem 0;
     font-size: 2rem;
     font-weight: 500;
@@ -243,11 +244,69 @@ header .menu-bar::before, header .icons .menu-bar::after{
     padding: 1rem 2rem;
     cursor: pointer;
 }
+/* footer section */
+.footer{
+    background-color: var(--dark);
+    padding-top: 0;
+}
+.footer .box-container{
+    background-color: var(--dark);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+}
 
+.footer .box-container .box{
+    background-color: var(--dark);
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    color: var(--beige);
+}
+
+.footer .box-container .quick_links, .footer .box-container .contact{
+    padding: 2rem;
+}
+
+.footer .box-container .box h3{
+    background-color: var(--dark);
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box a, .footer .box-container .box span{
+    display: block;
+    color: var(--beige);
+    background-color: var(--dark);
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.footer .box-container .box a:hover{
+    color: var(--yellow);
+}
+
+.footer .box-container .box .email{
+    text-decoration: underline;
+}
+
+.footer .box-container .logo_social{
+    text-align: center;
+}
+
+.footer .box-container .restaurant_logo{
+    width: 10%;
+    background-color: var(--dark);
+}
+
+.footer .box-container .social_logo{
+    width: 4%;
+    background-color: var(--dark);
+}
 /* media querries */
 @media (max-width:1200px) {
     html{
-        font-size: 60%;
+        font-size: 75%;
     }
     .home {
         padding-top: 10rem;
@@ -261,6 +320,16 @@ header .menu-bar::before, header .icons .menu-bar::after{
     .reservation{
         top: 3%;
         left: 55%;
+    }
+    .footer .box-container .logo_social{
+        padding-top: 1.2rem;
+    }
+    .footer .box-container .restaurant_logo{
+        width: 20%;
+    }
+    
+    .footer .box-container .social_logo{
+        width: 10%;
     }
 }
 
@@ -337,5 +406,15 @@ header .menu-bar::before, header .icons .menu-bar::after{
     }
     .reservation{
         left: 45%;
+    }
+    .footer .box-container .logo_social{
+        padding-top: 1.2rem;
+    }
+    .footer .box-container .restaurant_logo{
+        width: 70%;
+    }
+    
+    .footer .box-container .social_logo{
+        width: 40%;
     }
 }
