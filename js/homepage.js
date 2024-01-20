@@ -49,6 +49,8 @@ reservationBtn.onclick = () => {
     document.getElementById('home').style.filter = "brightness(30%)";
     document.getElementById('intro').style.filter = "blur(10px)";
     document.getElementById('intro').style.filter = "brightness(30%)";
+    document.getElementById('footer').style.filter = "blur(10px)";
+    document.getElementById('footer').style.filter = "brightness(30%)";
 }
 
 closeBtn.onclick = () => {
@@ -56,12 +58,12 @@ closeBtn.onclick = () => {
     document.getElementById('header').style.filter = "none";
     document.getElementById('home').style.filter = "none";
     document.getElementById('intro').style.filter = "none";
+    document.getElementById('footer').style.filter = "none";
 }
 
 submitBtn.onclick = () => {
     if (nameField.checkValidity() && phoneNumberField.checkValidity() && dateTimeField.checkValidity() && numberOfPeopleField.checkValidity()) {
         confirm("Your reservation has been made!");
-        reservationForm.style.display = "none";
     }
 }
 

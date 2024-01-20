@@ -40,12 +40,15 @@ reservationBtn.onclick = () => {
     document.getElementById('header').style.filter = "brightness(30%)";
     document.getElementById('locations').style.filter = "blur(10px)";
     document.getElementById('locations').style.filter = "brightness(30%)";
+    document.getElementById('footer').style.filter = "blur(10px)";
+    document.getElementById('footer').style.filter = "brightness(30%)";
 }
 
 closeBtn.onclick = () => {
     reservationForm.style.display = "none";
     document.getElementById('header').style.filter = "none";
     document.getElementById('locations').style.filter = "none";
+    document.getElementById('footer').style.filter = "none";
 }
 
 submitBtn.onclick = () => {

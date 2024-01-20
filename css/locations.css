@@ -100,8 +100,8 @@ header .menu-bar::before, header .icons .menu-bar::after{
 }
 
 .locations{
-    height: 100vh;
-    margin-bottom: 3rem;
+    height: 105vh;
+
 }
 
 .locations h1{
