@@ -3,7 +3,7 @@
 ## Project description
 Welcome to Hanoi Haven - a responsive restaurant website, crafted using HTML, CSS, and JavaScript with a slider built using Swiper.js!
 
-Check out my website here [Hanoi Haven](hanoihaven.netlify.app/)
+Check out my website here [Hanoi Haven](https://hanoihaven.netlify.app/)
 
 ## Screenshots
 
