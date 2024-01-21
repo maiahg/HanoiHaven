@@ -346,6 +346,7 @@ header .menu-bar::before, header .icons .menu-bar::after{
 .reservation-form .reserve-btn input{
     font-size: 2rem;
     font-weight: 600;
+    color: var(--dark);
     border: 2px solid var(--dark);
     border-radius: 0.5rem;
     padding: 1rem 2rem;

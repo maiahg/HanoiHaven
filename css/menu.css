@@ -240,6 +240,7 @@ header .menu-bar::before, header .icons .menu-bar::after{
     font-size: 2rem;
     font-weight: 600;
     border: 2px solid var(--dark);
+    color: var(--dark);
     border-radius: 0.5rem;
     padding: 1rem 2rem;
     cursor: pointer;
