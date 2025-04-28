@@ -1,4 +1,4 @@
-# Service Novigrad
+# Hanoi Haven
 
 ## Project description
 Welcome to Hanoi Haven - a responsive restaurant website, crafted using HTML, CSS, and JavaScript with a slider built using Swiper.js!
